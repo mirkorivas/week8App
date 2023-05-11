@@ -13,6 +13,10 @@ import PreviousIcon from '@mui/icons-material/FastRewind';
 import { IconButton } from '@mui/material';
 import dataJson from './data.json'
 
+//import Grid from '@mui/material/Grid'; // Grid version 1
+import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
+
+
 export default function App() {
   const [count, setCount] = useState(0)
   /*const user1 = {
@@ -34,7 +38,9 @@ export default function App() {
 
   const cards = users.map((e, i) => {
       return (
+        <Grid xs={12} sm={6} md={4} lg={4} xl={4}>
           <Card user={e} key={i} />
+        </Grid>
       )
   })
 
@@ -43,7 +49,9 @@ export default function App() {
     <div className="App">
       {/*<Banner/>*/}
       <Main>
-        {cards}
+        <Grid container spacing={5}>
+          {cards}
+        </Grid>
       </Main>
       <NavbarCustom>
         <NavbarItem>

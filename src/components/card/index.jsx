@@ -21,7 +21,7 @@ export function Card({ user }) {
     <div className="message">
         <div className="content">{message}</div>
         <div className="sender">{date +  " - " + sender}</div>
-    </div>.
+    </div>
     </div>
     )
 }
