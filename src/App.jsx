@@ -3,7 +3,8 @@ import { useState } from 'react'
 import './App.css'
 //import { Navbar } from './components/navbar'
 import { Main } from './components/main'
-import { Card } from './components/card'
+//import { Card } from './components/card'
+import { CardMui } from './components/cardMui'
 
 import { NavbarCustom, NavbarItem } from "./components/navbarCustom";
 

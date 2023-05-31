@@ -3,10 +3,11 @@ import { useState } from 'react'
 import './App.css'
 //import { Navbar } from './components/navbar'
 import { Main } from './components/main'
-import { Card } from './components/card'
+//import { Card } from './components/card'
+import { CardMui } from './components/cardMui'
+
 
 import { NavbarCustom, NavbarItem } from "./components/navbarCustom";
-
 import PlayIcon from '@mui/icons-material/PlayArrow';
 import NextIcon from '@mui/icons-material/FastForward';
 import PreviousIcon from '@mui/icons-material/FastRewind';
@@ -38,8 +39,8 @@ export default function App() {
 
   const cards = users.map((e, i) => {
       return (
-        <Grid xs={12} sm={6} md={4} lg={4} xl={4}>
-          <Card user={e} key={i} />
+        <Grid xs={12} sm={12} md={6} lg={4} xl={4}>
+          <CardMui user={e} key={i} />
         </Grid>
       )
   })
@@ -98,8 +99,6 @@ function getUser(targetUser, pos) {
           wish: targetUser[pos.wish], 
           date: convertDate(targetUser[pos.time]),
           sender: targetUser[pos.name],
-
-
       }
   )
 }
