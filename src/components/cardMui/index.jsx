@@ -20,7 +20,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { Box, Container } from '@mui/material'
+import { Box, Container, Stack, TableContainer } from '@mui/material'
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -56,6 +56,11 @@ export function CardMui({ user }) {
             </div>
         </div>
         </Box>
+        <Box sx={{
+              height: 30
+            }}>
+              <Seal imgSrc={SealEagle2Red}/>
+        </Box>
         <CardActions disableSpacing>
           <IconButton aria-label="add to favorites">
             <FavoriteIcon />
@@ -75,7 +80,6 @@ export function CardMui({ user }) {
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 1 }}>
-            <Seal imgSrc={SealEagle2Red}/>
             <Typography paragraph>
                 <div className="message">
                     <div className="content">{message}</div>
